@@ -1,0 +1,41 @@
+ /* Import af skrifttyper */
+@import "@fontsource/just-another-hand";
+@import "@fontsource/kurale";
+
+/* Globale variabler */
+:root {
+  /* Fonts */
+  --font-heading: "Just Another Hand", cursive;
+  --font-body: "Kurale", serif;
+
+  /* Farver */
+  --color-primary: #4A4A4A;
+  --color-secondary: #F6F0EE;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+}
+
+/* Grundopsætning */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  font-family: var(--font-heading);
+  font-weight: 400;
+}
+

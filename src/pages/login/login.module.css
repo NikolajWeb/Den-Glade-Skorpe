@@ -1,0 +1,33 @@
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin: 40px auto;
+  max-width: 400px;
+}
+
+.introText {
+    text-align: center;
+    font-size: 2rem;
+    padding: 20px;
+}
+
+
+
+.loginForm label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.loginForm input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.error {
+  display: block;
+  color: red;
+  margin-top: 5px;
+}
