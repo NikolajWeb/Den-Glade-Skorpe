@@ -14,7 +14,7 @@ import Backoffice from "./pages/backoffice/backoffice";
 /* Basic */
 import Navigation from "./components/navigation/Navigation";
 import PageFooter from "./components/pageFooter/PageFooter";
-import PageHeader from "./components/pageHeader/pageHeader";
+import PageHeader from "./components/pageHeader/PageHeader";
 
 /* Auth */
 import { AuthProvider } from "./context/AuthProvider";
