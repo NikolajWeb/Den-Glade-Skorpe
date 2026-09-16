@@ -19,6 +19,9 @@ import PageHeader from "./components/pageHeader/PageHeader";
 /* Auth */
 import { AuthProvider } from "./context/AuthProvider";
 
+/* Loaders */
+import backofficeLoader from "./loaders/DataLoaders";
+
 function App() {
   const location = useLocation();
 
@@ -30,10 +33,14 @@ function App() {
     { path: "/kurv", element: <Kurv /> },
     { path: "/login", element: <Login /> },
 
-    { path: "/backoffice", element: <Backoffice /> },
+    {
+      path: "/backoffice",
+      element: <Backoffice />,
+      loader: backofficeLoader,
+    },
   ]);
 
-  // Tjekker om brugeren befinder sig i backoffice eller på login siden, for at kunne give et simpelt layout
+  // Tjekker om brugeren befinder sig i backoffice eller på login siden
   const isLoginPage = location.pathname === "/login";
   const isBackoffice = location.pathname === "/backoffice";
 
@@ -51,18 +58,17 @@ function App() {
       {!minimalLayout && <PageFooter />}
 
       <ToastContainer
-        position='bottom-center'
+        position="bottom-center"
         autoClose={3000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
         pauseOnHover
         draggable
-        theme='light'
+        theme="light"
       />
     </AuthProvider>
   );
 }
 
 export default App;
-
